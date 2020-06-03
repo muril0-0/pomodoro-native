@@ -1,0 +1,6 @@
+red: #FD1E62
+black: #191919
+green: #33FE94
+orange: #FFB053
+orange2: #FF5B5E
+blue: #0076FD
