@@ -5,12 +5,14 @@ import { createStackNavigator } from "@react-navigation/stack";
 const AppStack = createStackNavigator();
 
 import Home from "./pages/Home";
+import Menu from "./pages/Menu";
 
 export default function Routes() {
   return (
     <NavigationContainer>
       <AppStack.Navigator screenOptions={{ headerShown: false }}>
         <AppStack.Screen name="Home" component={Home} />
+        <AppStack.Screen name="Menu" component={Menu} />
       </AppStack.Navigator>
     </NavigationContainer>
   );

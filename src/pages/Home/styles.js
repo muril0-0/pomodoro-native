@@ -44,12 +44,13 @@ export default StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-around",
+
+    marginTop: 50,
   },
   controlBtn: {
     width: 80,
     height: 80,
     marginHorizontal: 20,
-    marginTop: 30,
     borderRadius: 10,
 
     display: "flex",

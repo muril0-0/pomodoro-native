@@ -6,6 +6,7 @@ import {
   Text,
   TouchableOpacity,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { AppLoading } from "expo";
 import { useFonts } from "@use-expo/font";
 import { FontAwesome5 } from "@expo/vector-icons";
@@ -19,6 +20,12 @@ let customFonts = {
 };
 
 export default function Home() {
+  const navigation = useNavigation();
+
+  function toMenu() {
+    navigation.navigate("Menu");
+  }
+
   [isLoaded] = useFonts(customFonts);
 
   if (!isLoaded) {
@@ -36,7 +43,9 @@ export default function Home() {
       />
       <View style={styles.container}>
         <View style={styles.topBar}>
-          <FontAwesome5 name="cog" size={40} color="#fff" />
+          <TouchableOpacity onPress={toMenu}>
+            <FontAwesome5 name="cog" size={40} color="#fff" />
+          </TouchableOpacity>
         </View>
         <View style={styles.display}>
           <Text style={[styles.textDisplay, { fontFamily: "Quantico-Bold" }]}>
