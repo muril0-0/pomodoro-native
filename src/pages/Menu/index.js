@@ -44,7 +44,7 @@ export default function Menu() {
       <View style={styles.container}>
         <View style={styles.topBar}>
           <TouchableOpacity onPress={toHome}>
-            <FontAwesome5 name="arrow-left" size={40} color="#fff" />
+            <FontAwesome5 name="arrow-left" size={30} color="#fff" />
           </TouchableOpacity>
         </View>
         <View style={styles.inputs}>
@@ -64,7 +64,7 @@ export default function Menu() {
           </View>
           <View style={styles.relaxInput}>
             <Text style={[styles.relaxTitle, { fontFamily: "Quantico-Bold" }]}>
-              Focus Time:
+              Relax Time:
             </Text>
             <View style={styles.relaxBar}>
               <TouchableOpacity style={styles.relaxDown}>

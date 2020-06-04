@@ -1,27 +1,32 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import Constants from "expo-constants";
+
+const windowWidth = Dimensions.get("window").width;
+const windowHeight = Dimensions.get("window").height;
 
 export default StyleSheet.create({
   imgBg: {
     flex: 1,
-    width: null,
-    height: null,
+    width: windowWidth,
+    height: windowHeight,
     backgroundColor: "#191919",
+    resizeMode: "cover",
   },
   container: {
     display: "flex",
     flexDirection: "column",
-    marginTop: 20 + Constants.statusBarHeight,
+    flex: 1,
+    width: windowWidth,
+    height: windowHeight,
+    paddingHorizontal: 20,
+    paddingTop: 30 + Constants.statusBarHeight,
   },
   topBar: {
     marginRight: "auto",
-    marginLeft: 20,
   },
   inputs: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "flex-start",
-    marginHorizontal: 20,
     marginTop: 40,
   },
   focusInput: {
@@ -38,6 +43,7 @@ export default StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "center",
   },
   focusUp: {
     display: "flex",
@@ -50,18 +56,15 @@ export default StyleSheet.create({
     borderColor: "#FD1E62",
     borderWidth: 3,
     borderStyle: "solid",
+    borderLeftWidth: 0,
 
     borderTopRightRadius: 10,
     borderBottomRightRadius: 10,
   },
   focusValue: {
     height: 50,
-    width: 340,
+    width: "70%",
     backgroundColor: "#FD1E62",
-
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
   },
   focusDown: {
     display: "flex",
@@ -74,6 +77,7 @@ export default StyleSheet.create({
     borderColor: "#FD1E62",
     borderWidth: 3,
     borderStyle: "solid",
+    borderRightWidth: 0,
 
     borderTopLeftRadius: 10,
     borderBottomLeftRadius: 10,
@@ -93,6 +97,7 @@ export default StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "center",
   },
   relaxDown: {
     display: "flex",
@@ -105,18 +110,15 @@ export default StyleSheet.create({
     borderColor: "#33FE94",
     borderWidth: 3,
     borderStyle: "solid",
+    borderRightWidth: 0,
 
     borderTopLeftRadius: 10,
     borderBottomLeftRadius: 10,
   },
   relaxValue: {
     height: 50,
-    width: 340,
+    width: "70%",
     backgroundColor: "#33FE94",
-
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
   },
   relaxUp: {
     display: "flex",
@@ -129,6 +131,7 @@ export default StyleSheet.create({
     borderColor: "#33FE94",
     borderWidth: 3,
     borderStyle: "solid",
+    borderLeftWidth: 0,
 
     borderTopRightRadius: 10,
     borderBottomRightRadius: 10,

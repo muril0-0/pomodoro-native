@@ -1,34 +1,41 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import Constants from "expo-constants";
+
+const windowWidth = Dimensions.get("window").width;
+const windowHeight = Dimensions.get("window").height;
 
 export default StyleSheet.create({
   imgBG: {
     flex: 1,
-    width: null,
-    height: null,
+    width: windowWidth,
+    height: windowHeight,
     backgroundColor: "#191919",
+    resizeMode: "cover",
   },
 
   container: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    flex: 1,
+    width: windowWidth,
+    height: windowHeight,
+    paddingHorizontal: 20,
     marginTop: 30 + Constants.statusBarHeight,
   },
   topBar: {
     marginLeft: "auto",
-    marginRight: 20,
     marginTop: 20,
   },
   display: {
-    width: 400,
-    height: 400,
+    width: windowWidth * 0.85,
+    height: windowWidth * 0.85,
     marginTop: 50,
 
     borderWidth: 20,
     borderColor: "#FD1E62",
     borderStyle: "solid",
-    borderRadius: 400 / 2,
+    borderRadius: (windowWidth * 0.85) / 2,
 
     display: "flex",
     flexDirection: "column",
@@ -37,20 +44,20 @@ export default StyleSheet.create({
   },
   textDisplay: {
     color: "#FD1E62",
-    fontSize: 400 / 5,
+    fontSize: windowWidth / 5,
   },
   controls: {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-around",
+    width: windowWidth * 0.8,
 
     marginTop: 50,
   },
   controlBtn: {
-    width: 80,
-    height: 80,
-    marginHorizontal: 20,
+    width: (windowWidth * 0.8) / 4,
+    height: (windowWidth * 0.8) / 4,
     borderRadius: 10,
 
     display: "flex",
